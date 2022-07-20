@@ -130,8 +130,7 @@ margin-top: -40px;
 .nav .nav_cen li a:hover{
     color:#ff4200;
 }
-/*第一个nav结束*/
-/*nav2开始*/
+
 .nav2{
     font-size: 12px;
     width: 1352px;
@@ -151,7 +150,7 @@ margin-top: -40px;
 .nav2 a:hover{
     color:#ff4200;
 }
-.nav2 .sp{/*加上nav2权重更大*/
+.nav2 .sp{
     color: #747474;
     padding-left:20px;
 }
@@ -203,8 +202,7 @@ margin-top: -40px;
     color:#ff4200;
 }
 
-/*nav3结束*/
-/*banner开始*/
+
 .banner{
     width: 1355px;
     margin:0 auto;
