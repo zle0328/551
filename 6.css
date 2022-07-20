@@ -1,0 +1,382 @@
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    float:left;
+}
+body{
+    height: 2340px;
+}
+/*header开始*/
+.header{
+    height: 35px;
+    width:100%;
+    background-color: #f5f5f5;
+    border-top:2px solid #eeeeee;
+    border-bottom:2px solid #eeeeee;
+}
+.header .header_cen{
+    width: 1352px;
+    height: 35px;
+    margin: 0 auto;
+}
+.og{
+    color:#ff4200 !important;
+}
+.header .header_cen span{
+    padding-left:15px;
+    font-size:13px;
+
+}
+.header .header_cen a {
+    text-decoration: none;
+    color: #939393;
+    text-align: center;
+    line-height: 35px;
+}
+.header .header_cen a:hover{
+    color:#ff4200;
+}
+
+.header .header_cen .hl{
+    height: 35px;
+    width: 240px;
+}
+.header .header_cen .hr{
+    float: right; 
+    overflow: hidden;
+    height: 35px;
+    width: 575px;
+}
+/*清除浮动*/
+.clearfix:before, .clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+}
+clearfix{
+    *zoom:1;
+}
+.fl{
+    float:left;
+}
+
+    /*header结束*/
+/*第一个nav开始*/
+.nav{
+    height: 85px;
+    /*background-color: pink;*/
+}
+.nav .nav_cen{
+    width: 1352px;
+    height:85px;
+    margin: 27px auto 0;
+    /*background-color: yellow;*/
+}
+/*#675f5b*/
+.nav .nav_cen img{
+    display: block;
+    width: 214px;
+    height: 62px;
+    padding:0;
+    float:left;
+}
+.nav .nav_cen .search{
+    height: 40px;
+    width: 978px;
+    margin:0 0 6px 279px;
+
+}
+.nav .nav_cen div input{
+    display: block;
+    height: 34px;
+    width: 882px;
+    float:left;
+    /*border-right:0;*/
+    border:2px  solid #ff4200;
+}
+.nav .nav_cen div button{
+margin-top: -40px;
+    height:40px;
+    width: 92px;
+    float:right;
+    border:0;
+    margin-left:0;
+    background-color: #ff4200;
+    font-family: "宋体";
+    font-size: 16px;
+    color:#fff;
+}
+.nav .nav_cen div input[type=text]{
+
+    font-size: 16px;
+    text-indent:1em;
+    font-family: "宋体";
+
+}
+.nav .nav_cen ul{
+    margin-left:279px;
+}
+.nav .nav_cen li a{
+    text-decoration: none;
+    font-size: 12px;
+    color:#333333;
+    margin-right:10px;
+}
+.nav .nav_cen li a:hover{
+    color:#ff4200;
+}
+/*第一个nav结束*/
+/*nav2开始*/
+.nav2{
+    font-size: 12px;
+    width: 1352px;
+    height: 38px;
+    background-color: #f5f5f5;
+    margin:0 auto;
+    border:2px solid #eeeeee;
+}
+.nav2 a{
+    color: #333333;
+    text-decoration: none;
+    padding:0 10px;
+    text-align: center;
+    line-height: 38px;
+    border-right:1px solid #333333;
+}
+.nav2 a:hover{
+    color:#ff4200;
+}
+.nav2 .sp{/*加上nav2权重更大*/
+    color: #747474;
+    padding-left:20px;
+}
+.nav3 {
+    width: 1352px;
+    font-size: 12px;
+    height: 38px;
+    margin: 12px auto;
+    border: 2px solid #eeeeee;
+
+}
+.nav3 .nav3_fl {
+    height: 38px;
+    width: 230px;
+    float:left;
+    color: #747474;
+    text-align: center;
+    line-height: 38px;
+
+}
+
+.nav3 input{
+    margin-left:5px;
+    width: 42px;
+    height: 20px;
+    border:1px solid  #cccccc;
+
+}
+.nav3 input[type="text"]{
+    color: #747474;
+}
+.nav3 .nav3_right{
+    height: 38px;
+    width: 290px;
+    /*background-color: yellow;*/
+    float:right;
+}
+
+.nav3 .nav3_right a{
+    /*float: right;*/
+    text-decoration: none;
+    padding-right: 10px;
+    text-align: center;
+    line-height: 38px;
+    color: #333333;
+}
+.nav3 .nav3_right a:hover{
+
+    color:#ff4200;
+}
+
+/*nav3结束*/
+/*banner开始*/
+.banner{
+    width: 1355px;
+    margin:0 auto;
+}
+.banner li a {
+    float: left;
+    display: block;
+    text-decoration:none;
+    height: 369px;
+    width: 253px;
+    border: 1px solid #eeeeee;
+    margin: 10px 20px 0 0;
+}
+.banner li a img{
+    display: block;
+    margin: 16px auto;
+}
+.banner li a span {
+    color: #000000;
+    padding-left: 16px;
+    font-size: 12px;
+
+}
+.banner li a p {
+    padding-left:16px;
+    color: #888888;
+    line-height: 10px;
+    text-decoration: underline;
+    font-size: 12px;
+
+}
+.banner li a h4{
+    color:#ff4200;
+    margin:30px 0 0 16px;
+}
+.banner li a .last{
+    width: 220px;
+    height: 20px;
+    /*background-color: pink;*/
+    margin:0 auto;
+
+}
+.banner li a .tm{
+    height: 18px;
+    margin: 0;
+    float:left;
+}
+.banner li a input{
+    display: block;
+    float:right;
+    color:#888888;
+    margin-right:5px;
+    width: 105px;
+    height: 16px;
+    border:1px solid  #cccccc;
+
+}
+.banner li a:hover{
+    color:#000000;
+    border-color:#ff4200;
+    text-decoration: underline;
+}
+.banner li .no_rb{
+    margin: 10px 0;
+}
+.banner li a h5:hover{
+    color:#000000;
+}
+/*banner结束*/
+.btn_top{
+    position:fixed;
+    right:10px;
+    bottom:50px;
+    width: 43px;
+    height: 50px;
+    background:url("images/btn.png");
+}
+.next-btn{
+    height: 37px;
+    width: 500px;
+    margin:50px auto;
+    /*background-color: pink;*/
+}
+.next-btn .first{
+
+
+    background-color:#ff4200;
+    color:#fff ;
+    /*margin: 0 auto;*/
+}
+
+.next-btn a{
+
+    float: left;
+    width: 35px;
+    height: 35px;
+    display: block;
+    color: #333333;
+    font-size: 13px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+
+}
+.next-btn input{
+    height: 18px;
+    width: 45px;
+}
+.next-btn a:hover{
+    text-decoration: underline;
+}
+.footer{
+    height: 38px;
+    width: 1357px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+
+}
+.footer a{
+    color: #666666;
+    /*text-decoration: none;*/
+    font-size:13px;
+    padding-left:10px;
+    text-align: center;
+    line-height: 38px;
+}
+.footer a:hover{
+    color:#f85300;
+}
+.footer3{
+    width: 1194px;
+    height: 70px;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    margin:50px auto;
+}
+.footer3 li a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    color: #6c6c6c;
+    border-right: 1px solid #dddddd;
+    font-size: 13px;
+    padding-right:10px;
+    padding-left:10px;
+
+}
+.last{
+    width: 1194px;
+    height: 200px;
+    margin:0 auto;
+}
+.last li a{
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    color: #6c6c6c;
+    font-size: 13px;
+    padding-right:5px;
+    padding-left:5px;
+}
+
+.last li a:hover{
+    color:#f85300;
+}
+.last span{
+    border-right: 1px solid #dddddd;
+    text-align: center;
+    line-height: 35px;
+    font-size: 13px;
+    padding-right:5px;
+    padding-left:5px;
+    color:#9c9c9c;
+}
