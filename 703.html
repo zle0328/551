@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 遮罩层样式 */
+    .login-bg {
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* 隐藏 */
+        display: none;
+    }
+
+    /* 为模态对话框设置样式 */
+    .model {
+        width: 500px;
+        height: 200px;
+        box-shadow: 0px 0px 20px #ddd;
+        /* 更改鼠标箭头的样式 */
+        cursor: move;
+        display: none;
+        /* 设置绝对定位，将其定位到合适的位置 */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* 为表单元素设置样式 */
+    form {
+        /* 设置其占满该盒子 */
+        width: 100%;
+        height: 100%;
+        /* 设置为弹性盒子 */
+        display: flex;
+        /* 排列方向为竖版排列 */
+        flex-direction: column;
+    }
+
+    /* 为表单标题item1设置样式 */
+    .item1 {
+        font-weight: bold;
+        /* 设置为弹性盒子 */
+        display: flex;
+        /* 水平居中对齐 */
+        justify-content: center;
+        /* 垂直居中对齐 */
+        align-items: center;
+        /* 与其他盒子平分空间 */
+        flex: 1;
+    }
+
+    /* 为输入数据部分设置样式 */
+    .item2 {
+        display: flex;
+        /* 设置垂直排列 */
+        flex-direction: column;
+        /* 平分空间 */
+        flex: 1;
+        /* 页面上显示垂直方向盒子两侧的间隔相同 */
+        justify-content: space-around;
+        /* 页面上显示盒子水平居中 */
+        align-items: center;
+    }
+
+    /* 为盒子按钮设置样式 */
+    .vip {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 3px 40px;
+        background-color: orange;
+        color: white;
+    }
+
+    /* 为用户名那一行设置样式 */
+    .username {
+        margin-left: 16px;
+    }
+
+    /* 为关闭按钮写入样式 */
+    .close {
+        width: 20px;
+        height: 20px;
+        /* 设置圆角后，该小正方形就显示圆形 */
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        /* 设置边框，便于确认边界 */
+        border: 1px solid #ccc;
+        /* 文字水平居中 */
+        text-align: center;
+        /* 文字垂直居中 */
+        line-height: 16px;
+        cursor: pointer;
+    }
+
+    /* 为登录会员设置样式 */
+    .login-header {
+        /* 文字水平居中 */
+        text-align: center;
+        /* 文字字体放大 */
+        font-size: 20pt;
+        /* 设置鼠标样式 */
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!-- 遮罩层 -->
+    <div class="login-bg"></div>
+    <!-- 模态对话框 -->
+    <div class="model">
+        <form>
+            <!-- 模态对话框标题 -->
+            <div class="item1">登录会员</div>
+            <!-- 模态对话框内容 -->
+            <div class="item2">
+                <div class="username">
+                    <label>
+                        用户名：
+                        <input type="text" name="username">
+                    </label>
+                </div>
+                <div class="password">
+                    <label>
+                        登陆密码：
+                        <input type="password" name="password">
+                    </label>
+                </div>
+            </div>
+            <!-- 登录按钮 -->
+            <div class="item1">
+                <div class="vip">登录会员</div>
+            </div>
+        </form>
+        <!-- 关闭对话框按钮 -->
+        <div class="close">x</div>
+    </div>
+    <!-- 未操作时页面显示的文字 -->
+    <div class="login-header">登录会员</div>
+    <script>
+        //1、获取页面上的元素
+        let login = document.querySelector(".login-header");//获取“登陆会员”
+        let bg = document.querySelector(".login-bg");//获取遮罩层
+        let model = document.querySelector(".model");//获取模态框
+        let close = document.querySelector(".close");//获取关闭按钮
+        //2、为“登录会员”添加click事件
+        login.addEventListener("click", function () {
+            bg.style.display = "block";//显示遮罩层
+            model.style.display = "block";//显示模态框
+            model.style.backgroundColor = "white";//模态框背景色改成白色
+        })
+        //3、为关闭按钮添加click事件
+        close.addEventListener("click", function () {
+            model.style.display = "none";//模态框设置不可见
+            bg.style.display = "none";//遮罩层设置不可见
+        })
+        //4、为模态框注册按下鼠标事件(mousedown)
+        model.addEventListener("mousedown", function (e) {
+            //(1)获取鼠标在模态框中的坐标
+            let x = e.pageX - model.offsetLeft;//横坐标=鼠标在页面中的横坐标-模态框在页面中的偏移量
+            let y = e.pageY - model.offsetTop;//纵坐标=鼠标在页面中的纵坐标-模态框在页面中的纵坐标
+            //(2)定义移动的函数
+            function move(e) {
+                //模态框在页面中的纵坐标=鼠标在页面中的横坐标-鼠标在模态框中的横坐标
+                model.style.left = e.pageX - x + "px";
+                //模态框在页面中的横坐标=鼠标在页面中的纵坐标-鼠标在模态框中的纵坐标
+                model.style.top = e.pageY - y + "px";
+            }
+            //(3)给文档注册鼠标移动事件
+            document.addEventListener("mousemove", move);
+            //(4)给文档注册鼠标弹起事件
+            document.addEventListener("mouseup", function () {
+                document.removeEventListener("mousemove", move);
+            })
+        })
+    </script>
+</body>
+
+</html>

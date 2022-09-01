@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    box-sizing: border-box;
+  }
+  body{
+    font-family: Arial;
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+  .header{
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+  }
+  .header h1{
+    font-size: 50px;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: #333;
+  }
+  .topnav a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .topnav a:hover{
+    background-color: #ddd;
+    color: black;
+  }
+  .leftcolumn{
+    float: left;
+    width: 75%;
+  }
+  .rightcolumn{
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+  .fakeimg{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  .card{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .row:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .footer{
+    padding: 20px;
+  text-align: center;
+  background-color: #ddd;
+  margin-top: 20px;
+  }
+  @media screen and(max-width:800px) {
+    .leftcolumn,.rightcolumn{
+      width: 100%;
+      padding: 0;
+    }
+  }
+  @media screen and (max-width:400px) {
+    .topnav a{
+      float: none;
+      width: 100%;
+    }
+  }
+  #max{
+    width: 400px;
+    height: 200px;
+    align-items: center;
+ 
+    margin-top: -70px;
+  }
+  .re{
+    list-style-type: none;
+   
+  }
+  .re ul{
+    list-style-type: none;
+  }
+  .re ul>li{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transition: 1s;
+    opacity: 0; 
+  }
+  .re ul>li img{
+    width: 1800px;
+    height: 200px;
+    border-radius: 10%;
+    border: 15px solid #fffbd6;
+ margin-top: 30px;
+ 
+  }
+  #max ol {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5,15px);
+  grid-template-rows: auto;
+  grid-gap: 1em;gap: 1em;
+  float: left;
+  margin-top: 200px;
+  margin-left: 700px;
+  list-style: none;
+
+ 
+}
+#max ol li {
+  width: 25px;
+  height: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  float: left;
+  text-align: center;
+  border-radius: 2em;
+  border: 5px solid #999999;
+}
+</style>
+<body>
+<div class="header">
+ <div id="max">
+   <div class="re">
+     <ul>
+       <li><img src="images/tm.jpg" style="background-size: cover;" alt=""></li>
+       <li><img src="images/tb.jpg" alt=""></li>
+       <li><img src="images/taobao.jpg" style="background-size: cover;"></li>
+       <li><img src="images/99.jpg" alt=""></li>
+       <li><img src="images/66.jpg" alt=""></li>
+     </ul>
+     <ol>
+       <li></li>
+       <li></li>
+       <li>lo</li>
+       <li></li>
+       <li></li>
+     </ol>
+   </div>
+ </div>
+</div>
+<div class="topnav">
+  <a href="#">链接</a>
+   <a href="#">链接</a>
+    <a href="#">链接</a>
+    <a href="#" style="float: right;">链接</a>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>文章标题</h2>
+      <h5>2022年7月29日</h5>
+      <div class="fakeimg" style="height: 200px;">图片</div>
+      <p>一些文本...</p>
+    <p>菜鸟教程 学的不仅是技术，更是梦想！菜鸟教程 学的不仅是技术，更是梦想！菜鸟教程 学的不仅是技术，更是梦想！</p>
+    </div>
+     <div class="card">
+      <h2>文章标题</h2>
+      <h5>2022年7月29日</h5>
+      <div class="fakeimg" style="height: 200px;">图片</div>
+      <p>一些文本...</p>
+    <p>菜鸟教程 学的不仅是技术，更是梦想！菜鸟教程 学的不仅是技术，更是梦想！菜鸟教程 学的不仅是技术，更是梦想！</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+    <h2>关于我</h2>
+    <div class="fakeimg" style="height: 100px;">图片</div>
+    <p>关于我的一些信息...</p>
+    </div>
+    <div class="card">
+      <h3>热门文章</h3>
+      <div class="fakeimg"><p>图片</p></div>
+         <div class="fakeimg"><p>图片</p></div>
+            <div class="fakeimg"><p>图片</p></div>
+    </div>
+    <div class="card">
+      <h3>关注我</h3>
+      <p>一些文本...</p>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <h2>底部区域</h2>
+</div>
+<script>
+			window.onload = function(){
+  var box=this.document.getElementsByClassName("re")[0];
+  var lik=box.getElementsByTagName("li");
+  function fun(i,j){//转换图片函数，就是把透明度改了一下
+    lik[i].style.opacity=1;
+    lik[j].style.opacity=0;
+    lik[i+5].style.backgroundColor="#ffffff";//改一下小图标
+    lik[j+5].style.backgroundColor="#00000000"
+  }
+  fun(0,1);//初始化下
+  var i =0;
+  function auto(){//轮播循环函数
+    if(++i>=5){
+      i=0;
+      fun(0,4);
+    }
+    else fun(i,i-1);
+  }
+  timer=this.setInterval(auto,2000);
+  box.onmouseover = function () { //鼠标划上去，停止轮播
+    console.log('good');
+    clearInterval(timer);
+  }
+  box.onmouseout = function () { //鼠标划出，继续轮播
+    timer = setInterval(auto, 2000); //调用定时器
+  }
+  var j =0;
+  for(;j<5;j++){//点击小图标也可以转换图片
+    lik[j+5].ind=j;
+    lik[j+5].onclick=function(){
+      fun(this.ind,i)
+      i=this.ind;
+    }
+  }
+
+}
+
+		</script>
+</body>
+</html>

@@ -1,38 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yjk</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .windows{
+            position: relative;
+            border: 3px rgb(146, 146, 146) solid;
+            width: 700px;
+            height: 450px;
+            background-color: rgb(250, 186, 186);
+            margin: 170px auto;
+            overflow: hidden;
+        }
+        .leftbtn{
+            z-index: 999;
+             position: absolute;
+             box-sizing: border-box;
+             top: 195px;
+             left: 0;
+             width: 50px;
+             height: 70px;
+             background-color: rgba(136, 135, 135, 0.582);
+             line-height: 70px;
+             text-align: center;
+             font-size: 35px;
+             color: rgba(255, 255, 255, 0.609);
+             cursor: pointer;
+             display: none;
+        }
+        .leftbtn:hover{
+            background-color: rgba(189, 186, 186, 0.623);
+            color: aliceblue;
+        }
+        .rightbtn{
+            z-index: 999;
+             position: absolute;
+             box-sizing: border-box;
+             top: 195px;
+             right: 0;
+             width: 50px;
+             height: 70px;
+             background-color: rgba(136, 135, 135, 0.609);
+             line-height: 70px;
+             text-align: center;
+             font-size: 35px;
+             color: rgba(255, 255, 255, 0.596);
+             cursor: pointer;
+             display: none;
+        }
+        .rightbtn:hover{
+            background-color: rgba(189, 186, 186, 0.623);
+            color: aliceblue;
+        }
+        .imgbox{
+           position:absolute;
+           left: 0;
+           top: 0;
+            box-sizing: border-box;
+            width: 700%;
+            height: 450px;
+        }
+        .imgbox li{
+            float: left;
+            box-sizing: border-box;
+            width: 700px;
+            height: 450px;
+            list-style: none;
+        }
+        .imgbox li a{
+            box-sizing: border-box;
+            display: inline-block;
+            width: 700px;
+            height: 450px;
+            background-color: rgb(134, 152, 255);
+        }
+        .imgbox li a img{
+            cursor:auto;
+            width: 700px;
+            height: 450px;
+        }
+        .circlebox{
+            position: absolute;
+            bottom: 0;
+            width: 700px;
+            height: 40px;
+            background-color: rgba(94, 94, 94, 0.486);
+ 
+        }
+        .circle {
+            position: absolute;
+            bottom: 10px;
+            left: 300px;
+        }
+        .circle li {
+            float: left;
+            width: 7px;
+            height: 7px;
+            list-style: none;
+            border: 2px solid rgb(185, 185, 185);
+            border-radius:100%;
+            margin: 3px;
+            cursor: pointer;
+            background-color: rgb(173, 173, 173);
+        }
+        .circlecolor{
+            background-color: coral !important;
+            border: 2px solid coral !important;
+        }
+    </style>
+    <script src="../js/run.js"></script>
+    <script src="../js/btn-display.js"></script>
 </head>
-<style>
-  .main-content{
-    width: 100%;
-    height: 100%;
-    background-color: #72f884;
-  }
-  .left-content{
-    box-sizing: border-box;
-    width: 200px;
-    height: 200px;
-    background: rgb(238, 119, 34);
-  }
-  .right-content{
-    box-sizing: border-box;
-    width: 200px;
-    height: 202px;
-    background: rgb(68, 133, 255);
-  }
-</style>
 <body>
- <div id="app">
-   <div id="nav">
-     <div class="main-content">
-       <div class="left-content">Left</div>
-       <div class="right-content">Right</div>
-     </div>
-   </div>
- </div>
+    <div class="windows">
+        <div class="leftbtn"> < </div>
+        <div class="rightbtn"> > </div>
+        <ul class="imgbox">
+            <li>
+                <a href="#"><img src="./img/8.jpg" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/9.webp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/10.webp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/11.webp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/12.webp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/11.webp" alt="轮播图" class="lunboimg"></a>
+            </li>
+        </ul>
+        <div class="circlebox">
+               <ol class="circle"></ol>
+        </div>
+      
+     
+       
+    </div>
+    <script>
+      window.addEventListener('load',function(){
+    var leftbtn=document.querySelector('.leftbtn');
+    var rightbtn=document.querySelector('.rightbtn');
+    var windows=document.querySelector('.windows');
+    var circleul=document.querySelector('.imgbox');
+    var circleol=document.querySelector('.circle');
+    //光标移动至轮播图区域按钮显示，移开隐藏，点击按钮的变化效果
+    windows.addEventListener('mouseenter',function(){
+        leftbtn.style.display='block';
+        rightbtn.style.display='block';
+        clearInterval(timer)//清除定时器自动播放
+        timer=null;
+    })
+    windows.addEventListener('mouseleave',function(){
+        leftbtn.style.display='none'
+        rightbtn.style.display='none'
+        timer=setInterval(function(){
+            rightbtn.click();
+        },2000)
+    })
+    leftbtn.addEventListener('click',function(){
+        leftbtn.style.color='grey'
+        var timer=setTimeout(function(){
+            leftbtn.style.color='aliceblue'
+        },100)
+    })
+    rightbtn.addEventListener('click',function(){
+        rightbtn.style.color='grey'
+        var timer=setTimeout(function(){
+           rightbtn.style.color='aliceblue'
+        },100)
+    })
+    //点击小圆圈可以滚动
+    for(var i=0;i<circleul.children.length;i++){
+        lis=document.createElement('li');
+        lis.setAttribute('index',i);
+        circleol.appendChild(lis);
+        lis.addEventListener('click',function(){
+            var currentindex=this.getAttribute('index');//bug整改（3行）
+            num=currentindex;
+            circlechange=currentindex;
+            for(var i=0;i<circleol.children.length;i++){
+                circleol.children[i].className='';
+            }
+            this.className='circlecolor';
+            var imgwidth=windows.offsetWidth-6;
+            var long=this.getAttribute('index')*imgwidth;
+            run(circleul,-long);
+        })
+    }
+    circleol.children[0].className='circlecolor';
+    //克隆第一张图片至末尾
+    var firstimg=circleul.children[0].cloneNode(true);
+    circleul.appendChild(firstimg);
+ 
+//右侧按钮点击滚动
+    num=0;
+    circlechange=0;
+    rightbtn.addEventListener('click',function(){
+        if(num==circleul.children.length-1){
+            circleul.style.left=0;
+            num=0;
+        }
+        num++;
+        long=num*windows.offsetWidth-6*num;
+        run(circleul,-long);
+    //小圆圈跟着一起变化
+        circlechange++;
+        if(circlechange==circleul.children.length-1){
+           circlechange=0;
+        }
+        for(var i=0;i<circleol.children.length;i++){
+             circleol.children[i].className='';
+        }
+        circleol.children[circlechange].className='circlecolor';
+    })
+    //左侧按钮滚动
+    leftbtn.addEventListener('click',function(){
+        if(num==0){
+            circleul.style.left=(circleul.children.length-1)*windows.offsetWidth;
+            num=circleul.children.length-1;
+        }
+        num--;
+        long=num*windows.offsetWidth-6*num;
+        run(circleul,-long);
+    //小圆圈跟着一起变化
+        circlechange--;
+        if(circlechange<0){
+           circlechange=circleol.children.length-1;  //注意此处是ol的子节点的长度-1
+        }
+        for(var i=0;i<circleol.children.length;i++){
+             circleol.children[i].className='';
+        }
+        circleol.children[circlechange].className='circlecolor';
+    })
+   //自动播放
+        var timer=setInterval(function(){
+            rightbtn.click();
+        },2000)
+ 
+})
+ 
+    function run(obj,long,callback){
+        clearInterval(obj.timer)
+        obj.timer=setInterval(function(){
+            if(obj.offsetLeft==long){
+                window.clearInterval(obj.timer);
+                if(callback){
+                    callback();
+                }
+            }else{
+                step=(long-obj.offsetLeft)/10
+                step=step>0?Math.ceil(step):Math.floor(step)
+                obj.style.left=obj.offsetLeft+step+'px';
+            }
+        },20)
+    }
+ 
+ 
+    </script>
 </body>
 </html>

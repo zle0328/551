@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .title p {
+            display: none;
+            color: #ccc;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h5 class="title" id="hh1">
+        <a href="#" onclick="Change1()">我是链接 快点我</a>
+        <p id="title-p1">我出现啦</p>
+    </h5>
+    <h5 class="title" id="hh2">
+        <a href="#" onclick="Change2()">我是链接 快点我</a>
+        <p id="title-p2">我出现啦</p>
+    </h5>
+    <h5 class="title" id="hh3">
+        <a href="#" onclick="Change3()">我是链接 快点我</a>
+        <p id="title-p3">我出现啦</p>
+    </h5>
+ 
+ 
+    <script>
+        function Change1() {
+            var hh1 = document.getElementById("title-p1");
+            var hh2 = document.getElementById("title-p2");
+            var hh3 = document.getElementById("title-p3");
+            if (hh1.style.display == "" || hh1.style.display == "none") {
+                hh1.style.display = "block"
+                hh2.style.display = "none"
+                hh3.style.display = "none"
+            } else {
+                hh1.style.display = "none"
+            }
+        }
+ 
+        function Change2() {
+            var hh2 = document.getElementById("title-p2");
+            var hh1 = document.getElementById("title-p1");
+            var hh3 = document.getElementById("title-p3");
+            if (hh2.style.display == "" || hh2.style.display == "none") {
+                hh2.style.display = "block"
+                hh1.style.display = "none"
+                hh3.style.display = "none"
+            } else {
+                hh2.style.display = "none"
+            }
+        }
+ 
+        function Change3() {
+            var hh3 = document.getElementById("title-p3");
+            var hh1 = document.getElementById("title-p1");
+            var hh2 = document.getElementById("title-p2");
+            if (hh3.style.display == "" || hh3.style.display == "none") {
+                hh3.style.display = "block"
+                hh1.style.display = "none"
+                hh2.style.display = "none"
+            } else {
+                hh3.style.display = "none"
+            }
+        }
+    </script>
+</body>
+ 
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1>我的第一个javascript程序</h1>
+  <p id="demo">这是一个段落</p>
+  <button type="button" onclick="displayDate()">显示日期</button>
+
+  <button type="button" onclick="alert('提交成功')">点我！</button>
+
+  <p id="demo">
+    javascript能改变html元素的内容。
+  </p>
+  <input id="demp" type="text">
+  <iframe src="https://wwww.baidu.com"></iframe>
+  <script>
+    function displayDate(){
+      document.getElementById("demo").innerHTML=Date();
+    }
+
+    document.write("<h1>这是一个标题</h1>");
+    document.write("<p>这是一个段落</p>");
+
+function myFunction(){
+  x=document.getElementById("demo");
+  x.innerHTML="hello js!";
+  x.style.color="#ff0000"
+}
+    
+
+    function myFunction(){
+      var x=document.getElementById("demo").value;
+    if(isNaN(x)||x.replace(/(^\s*)|(\s*$)/g,"")=="")
+      {
+        alert("不是数字");
+      }
+      
+    }
+  </script>
+  <button type="button" onclick="myFunction()">点击这里</button>
+  <button type="button" onclick="myFunction()">点击这里</button>
+</body>
+</html>
