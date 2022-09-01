@@ -1,0 +1,28 @@
+.clearfix::before,
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+a{
+  text-decoration: none;
+ color:#333;
+}
+body{
+  font: 14px/1.5 Helvetica Neue,
+  Helvetica,
+  Arial,
+  Microsoft Yahei,
+  Hiragino Sans GB,
+  Heiti SC,
+  WenQuanYi Micro Hei,
+  sans-serif;
+  color: #333;
+ 
+}
+.w{
+  width: 100%;
+  margin: 0 auto;
+}
