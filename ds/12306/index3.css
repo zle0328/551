@@ -78,10 +78,14 @@ margin-left: 3px;
 }
 .header .header-one .top-max{
   width: 66%;
-  height: 43px;
-  background-color: #f8f8f8;
+  height: 0;
+
   margin-left: 100px;
 margin-top: 20px;
+  border-left: 30px solid transparent;
+  border-bottom: 45px solid #f8f8f8;
+  border-radius: 0 0px 0 15px;
+
 }
 
 .header .header-two{
@@ -130,6 +134,12 @@ padding-top: 10px;
    width: 100%;
    height: 450px;
    
+   
+ }
+ .swiper-pagination-bullet {
+   height: 13px;
+   width: 13px;
+   background-color: #ffffff;
  }
 
  .swiper-slide {
@@ -265,7 +275,15 @@ font-size: 14px;
 .banner-fif .fif-one{
   width: 375px;
   height: 41px;
-  background-color: #3b99fc;
+  background-color: #2E64FE;
+ 
+}
+.banner-fif span{
+  display: block;
+  width: 375px;
+  height: 41px;
+  background-color: #efeff4;
+   
  
 }
 .banner-fif .fif-one a{
@@ -274,7 +292,7 @@ font-size: 14px;
 .banner-fif .fif-two{
   width: 375px;
   height: 41px;
-  background-color: #efeff4;
+  background-color: #efeff4 ;
 }
 .banner-fif .fif-three{
   width: 375px;
@@ -305,6 +323,15 @@ font-size: 14px;
 box-shadow: rgba(red, green, blue, alpha);
  
 }
+.banner-six .show{
+  
+  display: block;
+}
+.banner-six div{
+  display: none;
+
+   
+}
 .banner-six li{
   box-sizing: border-box;
   width: 544px;
@@ -314,7 +341,7 @@ box-shadow: rgba(red, green, blue, alpha);
 .banner-six .six-two {
 float:right;
 margin-top: -180px;
-margin-right: -80px;
+margin-right: -60px;
 
 }
 .banner-six .six-one li{
@@ -337,9 +364,10 @@ margin-left: 1070px;
 margin-top: -12px;
 font-size: 12px;
 color: #a6a6a6;
+cursor: pointer;
 
 }
-.banner-six a:hover {
+.banner-six p:hover {
   color: #2E64FE !important;
 }
 .footer{
@@ -569,16 +597,31 @@ margin-top: 3px;
   height: 30px;
 }
 .hover .hover-two li{
+ 
 float: left;
-margin-left: 100px;
+margin-left: 50px;
+padding-left: 30px;
 font-size: 15px;
 color: #999999;
 
 }
-.hover .hover-two ul{
-  margin-left: -30px;
-  margin-top: 25px;
+.hover .hover-two  li:nth-child(1) {
+ border-bottom: 2px solid #2E64FE;
+ padding-top: 0px;
 }
+.hover .hover-two span{
+ display: inline-block;
+  padding-bottom: 15px;
+}
+.hover .hover-two ul{
+  width: 330px;
+  margin-left: 10px;
+  margin-top: 25px;
+  border-bottom: 2px solid #e8e7e6;
+
+  
+}
+
 .hover .hover-two .hover-three{
 width: 410px;
 height: 350px;
@@ -593,6 +636,7 @@ margin-left: 20px;
   outline-color: #2E64FE;
  border: none;
  border: 1px solid #e8e7e6;
+
 
   
  
@@ -795,7 +839,7 @@ margin-left: -300%;
 
 .nav-four .tg span {
   display: block;
-  width: 50;
+  width: 30%;
   height: 50px;
   float: left;
   background-color: white;
@@ -829,7 +873,7 @@ margin-left: -300%;
 
 .nav-fif .tg span {
   display: block;
-  width: 50;
+  width: 20%;
   height: 50px;
   float: left;
   background-color: white;
@@ -921,4 +965,20 @@ margin-left: -300%;
   float: left;
   background-color: white;
   color: black !important;
+}
+#top {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: fixed;
+  right: 40px;
+  bottom: 60px;
+  display: none;
+  cursor: pointer;
+}
+
+#top img {
+  width: 100px;
+  height: 100px;
 }
