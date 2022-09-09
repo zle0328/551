@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .clearfix::before,
 .clearfix::after{
   content: '';
@@ -25,4 +26,33 @@ body{
 .w{
   width: 100%;
   margin: 0 auto;
+=======
+.clearfix::before,
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+a{
+  text-decoration: none;
+ color:#333;
+}
+body{
+  font: 14px/1.5 Helvetica Neue,
+  Helvetica,
+  Arial,
+  Microsoft Yahei,
+  Hiragino Sans GB,
+  Heiti SC,
+  WenQuanYi Micro Hei,
+  sans-serif;
+  color: #333;
+ 
+}
+.w{
+  width: 100%;
+  margin: 0 auto;
+>>>>>>> 4a95f25201fd3c3379469de9229ac5cce2910c1c
 }
