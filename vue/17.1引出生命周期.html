@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初认vue</title>
+  <script type="text/javascript" src="./vue.js/vue.js"></script>
+</head>
+<body>
+  <div id="root">
+<h2 :style="{opacity}">欢迎学习Vue</h2>
+</div>
+
+  <script type="text/javascript">
+  Vue.config.productionTip= false//阻止vue在启动时生成生产提示。
+
+
+ 
+  new Vue({
+    el:'#root',
+    data:{
+   opacity:1
+    },
+    methods: {
+     
+    },
+    //Vue完成模板的解析并把真实的dom元素放入页面后（挂载完毕）调用
+    mounted() {
+        setInterval(() =>{
+    this.opacity-=0.01
+    if(this.opacity <=0) this.opacity=1
+  },16)
+      
+    }
+  })
+/*   setInterval(() =>{
+    vm.opacity-=0.01
+    if(vm.opacity <=0) vm.opacity=1
+  },16) */
+  </script>
+</body>
+</html>
